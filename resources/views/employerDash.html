@@ -1,0 +1,19 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h1 class="mb-4">Applied Jobs</h1>
+    @if($jobs->count())
+        <ul class="list-group">
+            @foreach($jobs as $job)
+                <li class="list-group-item">
+                    <strong>{{ $job->title }}</strong> at {{ $job->company_name }} <br>
+                    Applied on: {{ $job->pivot->created_at->format('d M Y') }}
+                </li>
+            @endforeach
+        </ul>
+    @else
+        <p>No jobs applied yet.</p>
+    @endif
+</div>
+@endsection
