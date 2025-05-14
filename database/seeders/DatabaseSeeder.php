@@ -11,9 +11,10 @@ class DatabaseSeeder extends Seeder
     {
         User::updateOrCreate(
             ['email' => 'test2@example.com'], // Check by email
-            ['name' => 'Test User'] // Update or insert with this name
+            ['name' => 'Test User'], // Update or insert with this name
+            ['password' => Hash::make('password123')]
         );
-        
+
     $this->call([
     AdminSeeder::class,
     AllowedStudentSeeder::class, // <- Add this line
