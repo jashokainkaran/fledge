@@ -83,7 +83,7 @@ Route::prefix('student')
          // Job application
          Route::get('jobs/{job}/apply',  [StudentJobController::class, 'showApplyForm'])->name('jobs.apply_form');
          Route::post('jobs/{job}/apply', [StudentJobController::class, 'submitApplication'])->name('jobs.submit_application');
-         Route::get('apply-job/{id}',    [StudentJobController::class, 'apply'])->name('apply-job');
+         Route::get('apply-job/{id}',    [StudentJobController::class, 'apply'])->name('applied_jobs');
 
          // Listings
          Route::get('applied-jobs',   [StudentJobController::class, 'applied'])->name('applied_jobs');
