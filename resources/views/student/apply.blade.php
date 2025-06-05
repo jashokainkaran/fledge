@@ -33,7 +33,7 @@
             </div>
 
             {{-- Application form --}}
-<form action="{{ route('student.jobs.submit_application', $job->id) }}" method="POST">
+                <form action="{{ route('student.jobs.submit_application', $job->id) }}" method="POST" enctype="multipart/form-data" class="space-y-5">
                     method="POST" 
                     enctype="multipart/form-data"
                     class="space-y-5">        
